@@ -97,7 +97,7 @@ try{S=JSON.parse(localStorage.getItem('gs3'))}catch(e){}S=S||seed();
    "Створити базу даних" → скопіювати URL виду https://ВАШ-ПРОЕКТ-default-rtdb.firebaseio.com)
    і синхронізація почне працювати між будь-якими пристроями й браузерами. Поки поле порожнє —
    діє лише локальне збереження (кожен браузер окремо) або claude.ai db, якщо вона доступна. */
-const FIREBASE_URL='';
+const FIREBASE_URL='https://ghost-school-pixie-default-rtdb.firebaseio.com';
 let dbRef=null,saveTimer=null,applyingRemote=false,dbStatus='init',pollTimer=null;
 const save=()=>{S.rev=(S.rev||0)+1;try{localStorage.setItem('gs3',JSON.stringify(S))}catch(e){}if(!applyingRemote)cloudPush()};
 function cloudPush(){
